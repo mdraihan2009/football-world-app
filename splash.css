@@ -1,0 +1,80 @@
+body{
+margin:0;
+padding:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(180deg,#081b29,#0f172a);
+font-family:Arial,sans-serif;
+overflow:hidden;
+}
+
+.splash-container{
+text-align:center;
+animation:fadeIn 1s ease;
+}
+
+#logo{
+width:180px;
+filter:drop-shadow(0 0 18px #22c55e);
+animation:logoFloat 2s ease-in-out infinite alternate;
+}
+
+#title{
+margin-top:18px;
+font-size:40px;
+color:#22c55e;
+text-shadow:0 0 15px #22c55e;
+}
+
+#tagline{
+margin-top:10px;
+font-size:17px;
+color:#d1d5db;
+letter-spacing:1px;
+}
+
+.progress{
+width:240px;
+height:10px;
+background:#1e293b;
+border-radius:50px;
+margin:28px auto 12px;
+overflow:hidden;
+}
+
+#progressBar{
+width:0%;
+height:100%;
+background:#22c55e;
+border-radius:50px;
+}
+
+#loadingText{
+color:#ffffff;
+font-size:16px;
+}
+
+#version{
+display:block;
+margin-top:18px;
+font-size:13px;
+color:#94a3b8;
+}
+
+@keyframes logoFloat{
+from{transform:translateY(0);}
+to{transform:translateY(-10px);}
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:scale(.95);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}

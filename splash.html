@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football World</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/splash.css">
+</head>
+
+<body>
+
+<div class="splash-container">
+
+    <img src="assets/logo.png/logo.png" id="logo" alt="Football World Logo">
+
+    <h1 id="title">Football World</h1>
+
+    <p id="tagline">
+        Live • Scores • News • Teams
+    </p>
+
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
+
+    <p id="loadingText">Loading... 0%</p>
+
+    <small id="version">Version 1.0</small>
+
+</div>
+
+<script>
+
+let progress = 0;
+
+const bar = document.getElementById("progressBar");
+const text = document.getElementById("loadingText");
+
+const timer = setInterval(() => {
+
+    progress += 2;
+
+    bar.style.width = progress + "%";
+    text.innerHTML = "Loading... " + progress + "%";
+
+    if (progress >= 100) {
+
+        clearInterval(timer);
+
+        document.body.style.transition = "opacity .6s";
+        document.body.style.opacity = "0";
+
+setTimeout(() => {
+
+    sessionStorage.setItem("splashShown", "true");
+
+    window.location.replace("index.html");
+
+}, 600);
+
+    }
+
+},40);
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Football World</title>
+
+<link rel="stylesheet" href="css/style.css">
+<script>
+
+if (!sessionStorage.getItem("splashShown")) {
+
+    sessionStorage.setItem("splashShown", "true");
+
+    window.location.replace("splash.html");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+⚽ Football World
+
+</header>
+<div class="hero-banner">
+
+    <div class="hero-overlay">
+
+        <h1>⚽ Football World</h1>
+
+        <p>
+            Live Scores • Fixtures • News • Rankings
+        </p>
+
+        <a href="live.html" class="hero-btn">
+            🔴 Watch Live
+        </a>
+
+    </div>
+
+</div>
+<div class="card">
+
+<h2>🔴 LIVE MATCH</h2>
+
+<div id="homeLive">
+
+<p style="text-align:center;padding:20px;">
+Loading live match...
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>📅 TODAY'S MATCHES</h2>
+
+<div id="homeSchedule">
+
+<p style="text-align:center;padding:20px;">
+Loading today's matches...
+</p>
+
+</div>
+
+</div>
+<div class="card">
+
+<h2>📰 Latest Football News</h2>
+
+<div id="homeNews">
+
+<p style="text-align:center;padding:20px;">
+Loading latest news...
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>⭐ My Favorite Team</h2>
+
+<div id="favoriteTeam">
+
+<p style="text-align:center;padding:20px;">
+No Favorite Team Selected
+</p>
+
+</div>
+
+</div>
+
+<!-- ⭐ My Favorite Player -->
+
+<div class="card">
+
+    <h2>⭐ My Favorite Player</h2>
+
+    <div id="favoritePlayer">
+
+        <p style="text-align:center;">
+            No Favorite Player Selected
+        </p>
+
+    </div>
+
+</div>
+
+<div class="card">
+
+<h2>🔍 Search Team</h2>
+
+<input
+type="text"
+id="teamSearch"
+placeholder="Search team..."
+style="width:100%;padding:12px;font-size:18px;border-radius:10px;border:none;"
+>
+
+<br><br>
+
+<button id="searchBtn">
+
+🔍 Search
+
+</button>
+
+<br><br>
+
+<div id="teamResult">
+
+<p style="text-align:center;">
+
+Search your favorite team
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🏆 League Standings</h2>
+
+<p style="text-align:center;">
+View Premier League, La Liga, Serie A and more.
+</p>
+
+<button onclick="location.href='standings.html'">
+
+🏆 Open Standings
+
+</button>
+
+</div>
+
+<div style="height:80px;"></div>
+
+<div class="bottom">
+
+<a href="index.html">
+🏠<br>Home
+</a>
+
+<a href="live.html">
+🔴<br>Live
+</a>
+
+<a href="schedule.html">
+📅<br>Schedule
+</a>
+
+<a href="news.html">
+📰<br>News
+</a>
+
+<a href="settings.html">
+⚙️<br>Settings
+</a>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/apiManager.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/home.js"></script>
+<script src="js/favorite-player.js"></script>
+<script src="js/search-team.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>League Standings</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+🏆 League Standings
+
+</header>
+
+<div style="padding:10px;">
+
+<button onclick="history.back()" class="back-btn">
+⬅ Back
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Select League</h2>
+
+<select id="leagueSelect" style="width:100%;padding:12px;font-size:18px;border-radius:10px;">
+
+<option value="39">🇬🇧 Premier League</option>
+
+<option value="140">🇪🇸 La Liga</option>
+
+<option value="135">🇮🇹 Serie A</option>
+
+<option value="78">🇩🇪 Bundesliga</option>
+
+<option value="61">🇫🇷 Ligue 1</option>
+
+</select>
+
+<br><br>
+
+<button id="loadStandings">
+
+📊 Load Standings
+
+</button>
+
+</div>
+
+<div class="card">
+
+<div id="standingsResult">
+
+<p style="text-align:center;padding:20px;">
+
+Choose a league to view standings.
+
+</p>
+
+</div>
+
+</div>
+<div style="height:80px;"></div>
+
+<div class="bottom">
+
+<a href="index.html">
+🏠<br>Home
+</a>
+
+<a href="live.html">
+🔴<br>Live
+</a>
+
+<a href="schedule.html">
+📅<br>Schedule
+</a>
+
+<a href="news.html">
+📰<br>News
+</a>
+
+<a href="settings.html">
+⚙️<br>Settings
+</a>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/apiManager.js"></script>
+<script src="js/standings.js"></script>
+
+</body>
+</html>
